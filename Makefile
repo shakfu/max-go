@@ -1,4 +1,4 @@
-.PHONY: lib verify
+.PHONY: lib fmt install build-examples build-x-examples clean verify
 
 lib:
 	rm -rf ./lib
@@ -18,11 +18,18 @@ fmt:
 install:
 	go install ./cmd/maxgo
 
-build: install
-	cd example; maxgo -name maxgo -install maxgo
 
-build-cross: install
+build-examples: install
+	@make -C examples/example1 install
+	@make -C examples/example2 install
+
+build-x-examples: install
 	cd example; maxgo -name maxgo -cross -install maxgo
+
+clean:
+	@make -C examples/example1 clean
+	@make -C examples/example2 clean
+
 
 verify:
 	clang verify/verify.c -o verify/verify

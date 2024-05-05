@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 782.0, 352.0, 946.0, 684.0 ],
+		"rect" : [ 460.0, 182.0, 946.0, 684.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -227,8 +227,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "bang" ],
-					"patching_rect" : [ 271.0, 347.0, 91.0, 22.0 ],
-					"text" : "maxgo foo 1.23"
+					"patching_rect" : [ 271.0, 347.0, 107.0, 22.0 ],
+					"text" : "example2 foo 1.23"
 				}
 
 			}
@@ -342,7 +342,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "maxgo.mxo",
+				"name" : "example2.mxo",
 				"type" : "iLaX"
 			}
  ],

@@ -135,5 +135,5 @@ func (i *instance) Free() {
 
 func main() {
 	// initialize Max class
-	max.Register("maxgo", &instance{})
+	max.Register("example2", &instance{})
 }

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 933.0, 495.0, 874.0, 625.0 ],
+		"rect" : [ 303.0, 154.0, 874.0, 625.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -68,7 +68,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 570.0, 450.0, 41.0, 22.0 ],
 					"text" : "ewma"
 				}
@@ -92,7 +92,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 345.0, 450.0, 41.0, 22.0 ],
 					"text" : "ewma"
 				}
@@ -192,8 +192,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "bang" ],
-					"patching_rect" : [ 480.0, 330.0, 81.0, 22.0 ],
-					"text" : "maxgo bench"
+					"patching_rect" : [ 480.0, 330.0, 97.0, 22.0 ],
+					"text" : "example2 bench"
 				}
 
 			}
@@ -435,7 +435,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-27", 0 ]
 				}
 
@@ -443,7 +443,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 2 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-27", 0 ]
 				}
 
@@ -564,11 +564,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "ewma.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "maxgo.mxo",
+				"name" : "example2.mxo",
 				"type" : "iLaX"
 			}
  ],

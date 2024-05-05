@@ -1,5 +1,9 @@
 # max-go
 
+This is a fork of https://github.com/256dpi/max-go.git
+
+The README below now has correct build instructions, otherwise unchanged.
+
 [![GoDoc](https://godoc.org/github.com/256dpi/max-go?status.svg)](http://godoc.org/github.com/256dpi/max-go)
 [![Release](https://img.shields.io/github/release/256dpi/max-go.svg)](https://github.com/256dpi/max-go/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/256dpi/max-go)](https://goreportcard.com/report/github.com/256dpi/max-go)
@@ -14,12 +18,15 @@ First you need to ensure you have recent version of [Go](https://golang.org) ins
 brew install go
 ```
 
-Then you can install the package and CLI using Go's module management:
+First clone the repo
 
 ```sh
-go get -u github.com/256dpi/max-go
-go get -u github.com/256dpi/max-go/cmd/maxgo
-``` 
+git clone https://github.com/256dpi/max-go.git
+cd max-go
+go install
+cd cmd/maxgo
+go install
+```
 
 This will install the `maxgo` command line utility. You may need to add Go's `bin` directory tou your `PATH` variable to access the CLI in the terminal:
 
@@ -35,7 +42,15 @@ brew install zig
 
 ## Usage
 
-Add the following file to an empty directory:
+Create an empty directory `example`.
+
+```sh
+mkdir example
+cd example
+go mod init github.com/example
+```
+
+Add the following file, `example.go` to the `example` directory:
 
 ```go
 package main
@@ -49,7 +64,7 @@ type instance struct {
 	out2  *max.Outlet
 }
 
-func (i *instance) Init(obj *max.Object, args []max.Atom) {
+func (i *instance) Init(obj *max.Object, args []max.Atom) bool {
 	// print to Max console
 	max.Pretty("init", args)
 
@@ -85,7 +100,14 @@ func main() {
 }
 ```
 
-Compile the external to the `dist` directory:
+The pull the dependencies:
+
+```sh
+cd example
+go get github.com/256dpi/max-go
+```
+
+Now compile the external to the `dist` directory:
 
 ```
 maxgo -name example -out dist
